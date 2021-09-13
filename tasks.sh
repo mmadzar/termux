@@ -1,5 +1,4 @@
-if [ ! -e "$TMPDIR/termux-started" ]; then
-    node-red
-    bash tasks.sh
-    touch "$TMPDIR/termux-started"
-fi
+while [true]
+do
+    mosquitto_pub -t HuaweiP30/battery/out -m "termux-battery-status"
+done
